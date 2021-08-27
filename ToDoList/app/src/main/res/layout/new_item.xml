@@ -1,0 +1,32 @@
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--
+     android:background="@null" removes the line from an edit text
+      android:textAppearance write item in a medium font-->
+    <EditText
+        android:id="@+id/newItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@null"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:hint="@string/add_new_item_edit_txt"
+        android:autofillHints="@string/add_new_item_edit_txt"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/newTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@id/newItem"
+        app:layout_constraintTop_toBottomOf="@id/newItem"
+        android:text="@string/save_item_btn"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
