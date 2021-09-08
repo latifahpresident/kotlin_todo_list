@@ -10,4 +10,5 @@
     <color name="light_blue">#79CBFC</color>
     <color name="yellow">#FFA600</color>
     <color name="green">#66D8BF</color>
+    <color name="transparent">#AD66D8BF</color>
 </resources>

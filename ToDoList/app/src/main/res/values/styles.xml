@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="android:windowSoftInputMode">adjustResize</item>
+<!--        <item name="android:windowIsFloating">false</item>-->
+<!--&lt;!&ndash;        <item name="android:statusBarColor">@android:color/transparent</item>&ndash;&gt;-->
+<!--        <item name="android:windowSoftInputMode">adjustResize</item>-->
+    </style>
+
+    <style name="Theme.App.Dialog.FullScreen"
+        parent="Theme.MaterialComponents.Dialog">
+        <!-- (1)-->
+        <item name="android:windowIsFloating">false</item>
+        <!-- (2) -->
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">
+            @anim/enter_slide_up
+        </item>
+        <item name="android:windowExitAnimation">
+            @anim/exit_slide_down
+        </item>
+    </style>
+</resources>

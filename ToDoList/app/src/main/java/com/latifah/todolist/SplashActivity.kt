@@ -13,8 +13,10 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         supportActionBar?.hide() //hide action bar so that the splash screen takes up full height of length of the screen
 
+        val i = Intent(this@SplashActivity, MainActivity::class.java) //run main activity after 3 sec
+
         Handler(Looper.getMainLooper()).postDelayed({ //delay the main activity for 3 sec (3000 milliseconds)
-            val i = Intent(this@SplashActivity, MainActivity::class.java) //run main activity after 3 sec
+            startActivity(i)
         }, 3000) //3 sec in milliseconds
     }
 }
