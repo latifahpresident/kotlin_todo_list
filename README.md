@@ -13,6 +13,6 @@ view where additional information about the task can be found.
 The app is written entirely in Kotlin and uses the Gradle build system. To run the app, you will need Android Studio installed.
 
 ```
-1. Clone sample project from git hub: https://github.com/azstack/Android-SDK-Sample-Project.git
+1. Clone sample project from github: https://github.com/latifahpresident/kotlin_todo_list.git
 2. Open and run in Android Studio
 ```
