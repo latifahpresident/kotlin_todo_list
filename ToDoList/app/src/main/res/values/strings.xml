@@ -3,4 +3,6 @@
     <string name="heading_txt">Just Do It.</string>
     <string name="save_item_btn">Save</string>
     <string name="add_new_item_edit_txt">Add A New Todo Item</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -5,51 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:backgroundTint="#CCCCCC"
+    >
 
-    <TextView
-        android:id="@+id/headingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="32sp"
-        android:text="@string/heading_txt"
-        app:layout_constraintTop_toTopOf="parent"/>
+<!--        <TextView-->
+<!--        android:id="@+id/headingText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:textSize="32sp"-->
+<!--        android:text="@string/heading_txt"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+
+    <!--    <EditText-->
+<!--        android:id="@+id/newItemEditTxt"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginLeft="16dp" />-->
+
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/headingText"
-        android:layout_marginTop="24dp"
-        android:nestedScrollingEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/headingText"
-        tools:layout_editor_absoluteX="16dp" />
-    <EditText
-        android:id="@+id/newItemEditTxt"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="16dp" />
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_nav"
+        android:backgroundTint="#CCCCCC"
+
+        />
 
 
-    <Button
-        android:id="@+id/addTaskFab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="576dp"
-        android:src="@drawable/ic_baseline_add"
-        android:text="Add Item"
-        app:backgroundTint="@color/light_blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
-        app:layout_constraintStart_toEndOf="@+id/newItemEditTxt"
-        app:layout_constraintTop_toTopOf="@+id/recyclerView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
