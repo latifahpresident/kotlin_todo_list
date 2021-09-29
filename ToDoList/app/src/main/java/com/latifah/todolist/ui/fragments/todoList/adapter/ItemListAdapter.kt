@@ -32,7 +32,7 @@ class ItemListAdapter() : RecyclerView.Adapter<ItemListAdapter.ViewHolder>()  {
                 val position = adapterPosition
                 Log.d(TAG, "Item clicked at: $position")
 
-                //pass current item to the update habit fragment
+                //pass current item to the update item fragment
                 val action = TodoListDirections.actionTodoListToUpdateTodoItem(itemList[position])
                 itemView.findNavController().navigate(action)
             }
@@ -60,7 +60,7 @@ class ItemListAdapter() : RecyclerView.Adapter<ItemListAdapter.ViewHolder>()  {
         holder.cardView.setOnClickListener {
             Log.d(TAG, "Item clicked at: $position")
 
-            //pass current item to the update habit fragment
+            //pass current item to the update item fragment
             val action = TodoListDirections.actionTodoListToUpdateTodoItem(itemList[position])
         }
 
