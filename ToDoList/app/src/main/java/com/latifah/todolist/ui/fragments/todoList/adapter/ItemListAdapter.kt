@@ -27,7 +27,7 @@ class ItemListAdapter() : RecyclerView.Adapter<ItemListAdapter.ViewHolder>()  {
             val description: TextView = itemView.findViewById(R.id.tv_item_description)
             val createdAt : TextView = itemView.findViewById(R.id.tv_item_createdTimeStamp)
 
-        init {
+        init { //set the click listener in an init block so the the items are immediately clickable when the adapter is called
             cardView.setOnClickListener {
                 val position = adapterPosition
                 Log.d(TAG, "Item clicked at: $position")
@@ -36,7 +36,7 @@ class ItemListAdapter() : RecyclerView.Adapter<ItemListAdapter.ViewHolder>()  {
                 val action = TodoListDirections.actionTodoListToUpdateTodoItem(itemList[position])
                 itemView.findNavController().navigate(action)
             }
-        }
+       }
 
     }
 
@@ -57,12 +57,13 @@ class ItemListAdapter() : RecyclerView.Adapter<ItemListAdapter.ViewHolder>()  {
         holder.description.text = currentItem.description
         holder.createdAt.text = currentItem.createdAt
 
-        holder.cardView.setOnClickListener {
-            Log.d(TAG, "Item clicked at: $position")
-
-            //pass current item to the update item fragment
-            val action = TodoListDirections.actionTodoListToUpdateTodoItem(itemList[position])
-        }
+//        holder.cardView.setOnClickListener {
+//            Log.d(TAG, "Item clicked at: $position")
+//
+//            //pass current item to the update item fragment
+//            val action = TodoListDirections.actionTodoListToUpdateTodoItem(itemList[position])
+//            holder.itemView.findNavController().navigate(action)
+//        }
 
     }
 
@@ -71,7 +72,7 @@ class ItemListAdapter() : RecyclerView.Adapter<ItemListAdapter.ViewHolder>()  {
     }
 
     fun setData(item: List<Item>) {
-        this.itemList = item
+        this.itemList = item //update the itemList with the data from the observer
         notifyDataSetChanged()
     }
 //
